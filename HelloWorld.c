@@ -3,9 +3,9 @@
 
 int main(){
     
-    float pi = 3.14159265359;
+    const float PI = 3.14159265359;
     double pi2 = 3.14159265359;
-    printf("float:\t%0.15f\n", pi);
+    printf("float:\t%0.15f\n", PI);
     printf("double:\t%0.15lf\n", pi2);
 
     bool fact = true;
