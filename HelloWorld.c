@@ -12,5 +12,7 @@ int main(){
     char letter = 'A';
     char name[] = "Andrew";
 
+    printf("Hi, %s.\n",name);
+
     return 0;
 }
