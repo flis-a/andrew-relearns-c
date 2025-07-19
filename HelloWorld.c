@@ -1,14 +1,16 @@
 #include <stdio.h>
 
 int main(){
-    // Test program
-    printf("test\n");
-    printf("\ttest\n");
-    printf("\t\ttest");
+    
+    int x;
+    x = 123;
 
-    /*
-    Multiline comment
-    */
+    int y = 321;
+
+    int age = 24;
+    float gpa = 3.2;
+    char letter = 'A';
+    char name[] = "Andrew";
 
     return 0;
 }
