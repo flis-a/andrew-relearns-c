@@ -1,14 +1,22 @@
 #include <stdio.h>
 #include <stdbool.h>
+#include <string.h>
 
 int main(){
     
-    int z = 1;
-    z+= 2;
-    z++;
+    char name[25];
+    int z;
+    
+    printf("\nEnter Name:\n");
+    fgets(name, 25, stdin);
 
-    // print value
-    printf("%d", z);
+    printf("\npick a number:\n");
+    scanf("%d", &z);
+
+    name[strlen(name)-1] = '\0';
+
+    printf("You are %s #%d",name, z);
+
 
     return 0;
 }
