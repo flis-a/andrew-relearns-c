@@ -1,18 +1,20 @@
 #include <stdio.h>
+#include <stdbool.h>
 
 int main(){
     
-    int x;
-    x = 123;
+    float pi = 3.14159265359;
+    double pi2 = 3.14159265359;
+    printf("float:\t%0.15f\n", pi);
+    printf("double:\t%0.15lf\n", pi2);
 
-    int y = 321;
+    bool fact = true;
+    printf("bool:\t%d\n", fact);
 
-    int age = 24;
-    float gpa = 3.2;
-    char letter = 'A';
-    char name[] = "Andrew";
-
-    printf("Hi, %s.\n",name);
+    char letter = 100;
+    unsigned char letter2 = 255;
+    printf("char:\t%c\n", letter); 
+    printf("char2:\t%d\n", letter2); 
 
     return 0;
 }
