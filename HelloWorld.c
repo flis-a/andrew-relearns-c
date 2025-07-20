@@ -5,19 +5,26 @@
 
 int main(){
     
-    double A;
-    double B;
-    double C;
+    int age;
 
-    printf("Side A:");
-    scanf("%lf", &A);
+    printf("Age:");
+    scanf("%d", &age);
 
-    printf("Side B:");
-    scanf("%lf", &B);
+    if(age >= 18){
+      
+        printf("\n>18");
 
-    C = sqrt(A*A + B*B);
+    }else if(age < 0){
 
-    printf("Side C: %lf", C);
+        printf("\n<0");
+
+    }else{
+
+        printf("\n<18");
+
+    }
+
+    
 
     return 0;
 }
