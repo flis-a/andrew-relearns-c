@@ -6,27 +6,18 @@
 
 int main(){
 
-    int row;
-    int col;  
-    char sym;
+    for(int i = 1; i <= 22; i++)
+    {   
+        if(i == 13)
+        {
+            continue;
+        }
+        printf("%d\n",i);
 
-    printf("Enter row #: ");
-    scanf("%d",&row);
-
-    printf("Enter column #: ");
-    scanf("%d",&col);
-
-    printf("Enter symbol: ");
-    scanf(" %c",&sym);    
-
-    for (int i = 0; i < row; i++)
-    {
-        for(int j = 0; j < col; j++){
-
-            printf("%c",sym);
-
-        }  
-        printf("\n");
+        if(i == 21)
+        {
+            break;
+        }
     }
     
     return 0;
