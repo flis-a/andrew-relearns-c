@@ -6,21 +6,20 @@
 
 int main(){
 
-    char name[25];
-
-    printf("Enter name: ");
-    fgets(name, 25, stdin);
-    name[strlen(name) - 1] = '\0';
+    int num = 0;
+    int sum = 0;  
     
-    while(strlen(name) <= 0){
+    do{
 
-        printf("Re-enter name: ");
-        fgets(name, 25, stdin);
-        name[strlen(name) - 1] = '\0';
+        printf("Enter # > 0: ");
+        scanf("%d",&num);
+        if(num > 0){
+            sum += num;
+        }
+        
+    }while(num > 0);
 
-    }
-
-    printf("hello, %s ",name);
+    printf("Sum: %d ",sum);
 
     return 0;
 }
