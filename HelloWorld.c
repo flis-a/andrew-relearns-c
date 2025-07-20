@@ -41,6 +41,7 @@ int main(){
         break;
     
     default:
+        printf("not valid\n");
         r = 0;
         break;
     }
