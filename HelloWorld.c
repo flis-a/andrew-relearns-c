@@ -6,29 +6,46 @@
 
 int main(){
     
-    char unit;
-    float temp;
+    char op;
+    double num1;
+    double num2;
+    double r;
+
+    printf("Operator: ");
+    scanf("%c", &op);
+    printf("\nnum1: ");
+    scanf("%lf", &num1);
+    printf("\nnum2: ");
+    scanf("%lf", &num2);
+
+    switch (op)
+    {
+    case '+':
+        r = num1 + num2;
+        break;
+
+    case '-':
+        r = num1 - num2;
+        break;
+
+    case '/':
+        r = num1 / num2;
+        break;
+
+    case '*':
+        r = num1 * num2;
+        break;
+
+    case '^':
+        r = pow(num1, num2);
+        break;
     
-    printf("\nF or C:");
-    scanf("%c",&unit);
-
-    unit = toupper(unit);
-
-    if(unit == 'C'){
-         printf("C:");
-         scanf("%f",&temp);
-         temp = (temp* 9/5)+32;
-         printf("F:%f",temp);
-
-    }else if(unit == 'F'){
-         printf("F:");
-         scanf("%f",&temp);
-         temp = ((temp-32)*5)/9;
-         printf("C:%f",temp);
-
-    }else{
-        printf("None\n");
+    default:
+        r = 0;
+        break;
     }
+
+    printf("\nResult: %lf", r);
 
     return 0;
 }
