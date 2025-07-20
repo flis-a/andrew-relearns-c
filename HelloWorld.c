@@ -6,19 +6,16 @@
 
 int main(){
 
-    for(int i = 1; i <= 22; i++)
-    {   
-        if(i == 13)
-        {
-            continue;
-        }
-        printf("%d\n",i);
+    double prices[5] = {1.0,3.0};
+    char name[] = "Andrew";
 
-        if(i == 21)
-        {
-            break;
-        }
-    }
+    prices[2] = 6.0;
+    prices[3] = 9.0;
+    prices[4] = 12.0;
+
+
+    printf("$%0.2lf",prices[1]);
+
     
     return 0;
 }
