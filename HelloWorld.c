@@ -5,15 +5,20 @@
 #include <ctype.h>
 
 
-void word(){
-    printf("this is a test.\n");
+void word(double x, char y[])
+{
+    printf("this is a test. Code: #%.0lf\n", x);
+    printf("%s\n",y);
 }
 
 int main(){
+
+    double num = 12345;
+    char letters[] = "test";
     
-    word();
-    word();
-    word();
+    word(num, letters);
+    word(num, letters);
+    word(num, letters);
 
     return 0;
 }
