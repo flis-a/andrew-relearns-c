@@ -1,22 +1,22 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <string.h>
+#include <math.h>
 
 int main(){
     
-    char name[25];
-    int z;
-    
-    printf("\nEnter Name:\n");
-    fgets(name, 25, stdin);
+    double A = sqrt(9);
+    double B = pow (2,4);
+    double C = ceil(3.14);
+    double D = floor(3.99);
+    double E = fabs(-10);
+    double F = log(3);
+    double G = sin(45);
 
-    printf("\npick a number:\n");
-    scanf("%d", &z);
-
-    name[strlen(name)-1] = '\0';
-
-    printf("You are %s #%d",name, z);
-
+    printf("\n%lf", A);
+    printf("\n%lf", B);
+    printf("\n%lf", C);
+    printf("\n%lf", D);
 
     return 0;
 }
