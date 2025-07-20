@@ -6,15 +6,16 @@
 
 int main(){
 
-    char cars[][10] = {"Mustang","Corvette","Porche"};
+    char x[15] = "Xx";
+    char y[15] = "Yy";
+    char temp[15];
 
-    strcpy(cars[0], "Telsa");
+    strcpy(temp,x);
+    strcpy(x,y);
+    strcpy(y,temp);
 
-    for(int i = 0; i < sizeof(cars)/sizeof(cars[0]); i++){
-
-        printf("%s\n",cars[i]);
-
-    }
+    printf("x = %s\n", x);
+    printf("y = %s\n", y);
     
     return 0;
 }
