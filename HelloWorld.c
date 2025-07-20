@@ -6,20 +6,28 @@
 
 int main(){
 
-    int num = 0;
-    int sum = 0;  
+    int row;
+    int col;  
+    char sym;
+
+    printf("Enter row #: ");
+    scanf("%d",&row);
+
+    printf("Enter column #: ");
+    scanf("%d",&col);
+
+    printf("Enter symbol: ");
+    scanf(" %c",&sym);    
+
+    for (int i = 0; i < row; i++)
+    {
+        for(int j = 0; j < col; j++){
+
+            printf("%c",sym);
+
+        }  
+        printf("\n");
+    }
     
-    do{
-
-        printf("Enter # > 0: ");
-        scanf("%d",&num);
-        if(num > 0){
-            sum += num;
-        }
-        
-    }while(num > 0);
-
-    printf("Sum: %d ",sum);
-
     return 0;
 }
