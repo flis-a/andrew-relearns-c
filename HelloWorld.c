@@ -6,47 +6,14 @@
 
 int main(){
     
-    char op;
-    double num1;
-    double num2;
-    double r;
+    float temp = 25;
+    bool apple = true;
 
-    printf("Operator: ");
-    scanf("%c", &op);
-    printf("\nnum1: ");
-    scanf("%lf", &num1);
-    printf("\nnum2: ");
-    scanf("%lf", &num2);
-
-    switch (op)
-    {
-    case '+':
-        r = num1 + num2;
-        break;
-
-    case '-':
-        r = num1 - num2;
-        break;
-
-    case '/':
-        r = num1 / num2;
-        break;
-
-    case '*':
-        r = num1 * num2;
-        break;
-
-    case '^':
-        r = pow(num1, num2);
-        break;
-    
-    default:
-        printf("not valid\n");
-        r = 0;
-        break;
+    if(temp >= 0 && temp <=32 && apple){
+        printf("\nGood");
+    }else{
+        printf("\nBad");
     }
-
-    printf("\nResult: %lf", r);
 
     return 0;
 }
