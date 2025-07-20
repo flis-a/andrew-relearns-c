@@ -2,30 +2,33 @@
 #include <stdbool.h>
 #include <string.h>
 #include <math.h>
+#include <ctype.h>
 
 int main(){
     
-    char grade;
-
-    printf("\nGrade:");
-    scanf("%c", &grade);
-
-    switch(grade){
-        case 'A':
-            printf("\nApple");
-            break;
-        case 'B':
-            printf("\nBapple");
-            break;
-        case 'C':
-            printf("\nCapple");
-            break;
-        default:
-            printf("\nNope!");
-    }
-
-
+    char unit;
+    float temp;
     
+    printf("\nF or C:");
+    scanf("%c",&unit);
+
+    unit = toupper(unit);
+
+    if(unit == 'C'){
+         printf("C:");
+         scanf("%f",&temp);
+         temp = (temp* 9/5)+32;
+         printf("F:%f",temp);
+
+    }else if(unit == 'F'){
+         printf("F:");
+         scanf("%f",&temp);
+         temp = ((temp-32)*5)/9;
+         printf("C:%f",temp);
+
+    }else{
+        printf("None\n");
+    }
 
     return 0;
 }
