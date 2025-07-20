@@ -6,13 +6,35 @@
 
 int main(){
 
-    double prices[] = {5.0,10.0,15.0,20.0,25.0};
+    /*
+    int num[2][3] = {
+                        {1, 2, 3},
+                        {4, 5, 6}
+                    };
+    */
 
-    for(int i = 0; i < sizeof(prices)/sizeof(prices[0]); i++){
+    int num[2][3];
+    int row = sizeof(num)/sizeof(num[0]);
+    int col = sizeof(num[0])/sizeof(num[0][0]);
 
-        printf("\t$%0.2lf\n",prices[i]);
+    num[0][0] = 1;
+    num[0][1] = 2;
+    num[0][2] = 3;
+    num[1][0] = 4;
+    num[1][1] = 5;
+    num[1][2] = 6;
+
+    for(int i = 0; i<row; i++){
+
+        for(int j = 0; j<col; j++){
+            
+            printf("%d ",num[i][j]);
+
+        }
+        printf("\n");
 
     }
 
+    
     return 0;
 }
