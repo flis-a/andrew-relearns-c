@@ -5,20 +5,18 @@
 #include <ctype.h>
 
 
-void word(double x, char y[])
+double square(double x)
 {
-    printf("this is a test. Code: #%.0lf\n", x);
-    printf("%s\n",y);
+    double r = x * x;
+    printf("this is a test.");
+    return r;
+    
 }
 
 int main(){
 
-    double num = 12345;
-    char letters[] = "test";
-    
-    word(num, letters);
-    word(num, letters);
-    word(num, letters);
+    double num = square(10.0);
+    printf("\n%lf",num);
 
     return 0;
 }
