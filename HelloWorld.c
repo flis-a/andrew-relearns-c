@@ -9,7 +9,7 @@ int main(){
     float temp = 25;
     bool apple = true;
 
-    if(temp >= 0 && temp <=32 && apple){
+    if(temp < 0 || apple){
         printf("\nGood");
     }else{
         printf("\nBad");
