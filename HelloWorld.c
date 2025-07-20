@@ -4,16 +4,16 @@
 #include <math.h>
 #include <ctype.h>
 
+
+void word(){
+    printf("this is a test.\n");
+}
+
 int main(){
     
-    float temp = 25;
-    bool apple = false;
-
-    if(temp != 0 && !apple){
-        printf("\nGood");
-    }else{
-        printf("\nBad");
-    }
+    word();
+    word();
+    word();
 
     return 0;
 }
