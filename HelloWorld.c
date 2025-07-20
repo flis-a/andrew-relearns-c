@@ -5,18 +5,19 @@
 
 int main(){
     
-    double A = sqrt(9);
-    double B = pow (2,4);
-    double C = ceil(3.14);
-    double D = floor(3.99);
-    double E = fabs(-10);
-    double F = log(3);
-    double G = sin(45);
+    const double PI = 3.14159;
+    double radius;
+    double circum;
+    double area;
 
-    printf("\n%lf", A);
-    printf("\n%lf", B);
-    printf("\n%lf", C);
-    printf("\n%lf", D);
+    printf("Enter Radius:");
+    scanf("%lf", &radius);
+
+    circum = 2 * PI * radius;
+    area = PI * radius * radius;
+
+    printf("Circumference: %lf", circum);
+    printf("\nArea: %lf", area);
 
     return 0;
 }
