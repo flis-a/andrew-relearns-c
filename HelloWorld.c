@@ -5,24 +5,25 @@
 
 int main(){
     
-    int age;
+    char grade;
 
-    printf("Age:");
-    scanf("%d", &age);
+    printf("\nGrade:");
+    scanf("%c", &grade);
 
-    if(age >= 18){
-      
-        printf("\n>18");
-
-    }else if(age < 0){
-
-        printf("\n<0");
-
-    }else{
-
-        printf("\n<18");
-
+    switch(grade){
+        case 'A':
+            printf("\nApple");
+            break;
+        case 'B':
+            printf("\nBapple");
+            break;
+        case 'C':
+            printf("\nCapple");
+            break;
+        default:
+            printf("\nNope!");
     }
+
 
     
 
