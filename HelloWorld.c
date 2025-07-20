@@ -4,17 +4,20 @@
 #include <math.h>
 #include <ctype.h>
 
-
-int findMax(int x, int y)
-{
-    //(condition) ? value_if_true : value_if_false;
-    return (x > y) ? x : y;
-}
+void hello(char[], int);
 
 int main(){
 
-    int max = findMax(3,4);
-    printf("\n%d",max);
+    char name[] = "Andrew";
+    int age = 24;
+
+    hello(name, age);
 
     return 0;
+}
+
+void hello(char name[], int age)
+{
+    printf("\n%s",name);
+    printf("\n%d",age);
 }
