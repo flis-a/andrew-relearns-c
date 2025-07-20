@@ -5,18 +5,16 @@
 #include <ctype.h>
 
 
-double square(double x)
+int findMax(int x, int y)
 {
-    double r = x * x;
-    printf("this is a test.");
-    return r;
-    
+    //(condition) ? value_if_true : value_if_false;
+    return (x > y) ? x : y;
 }
 
 int main(){
 
-    double num = square(10.0);
-    printf("\n%lf",num);
+    int max = findMax(3,4);
+    printf("\n%d",max);
 
     return 0;
 }
