@@ -5,19 +5,19 @@
 
 int main(){
     
-    const double PI = 3.14159;
-    double radius;
-    double circum;
-    double area;
+    double A;
+    double B;
+    double C;
 
-    printf("Enter Radius:");
-    scanf("%lf", &radius);
+    printf("Side A:");
+    scanf("%lf", &A);
 
-    circum = 2 * PI * radius;
-    area = PI * radius * radius;
+    printf("Side B:");
+    scanf("%lf", &B);
 
-    printf("Circumference: %lf", circum);
-    printf("\nArea: %lf", area);
+    C = sqrt(A*A + B*B);
+
+    printf("Side C: %lf", C);
 
     return 0;
 }
