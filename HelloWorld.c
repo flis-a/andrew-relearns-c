@@ -6,15 +6,21 @@
 
 int main(){
 
-    int num;
+    char name[25];
 
-    printf("Enter num: ");
-    scanf("%d", &num);
+    printf("Enter name: ");
+    fgets(name, 25, stdin);
+    name[strlen(name) - 1] = '\0';
     
-    for(int i = 0; i <= num; i+=2)
-    {
-        printf("\nNum:\t%d",i);
+    while(strlen(name) <= 0){
+
+        printf("Re-enter name: ");
+        fgets(name, 25, stdin);
+        name[strlen(name) - 1] = '\0';
+
     }
+
+    printf("hello, %s ",name);
 
     return 0;
 }
