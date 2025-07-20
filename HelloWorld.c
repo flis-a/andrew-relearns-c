@@ -6,16 +6,13 @@
 
 int main(){
 
-    double prices[5] = {1.0,3.0};
-    char name[] = "Andrew";
+    double prices[] = {5.0,10.0,15.0,20.0,25.0};
 
-    prices[2] = 6.0;
-    prices[3] = 9.0;
-    prices[4] = 12.0;
+    for(int i = 0; i < sizeof(prices)/sizeof(prices[0]); i++){
 
+        printf("\t$%0.2lf\n",prices[i]);
 
-    printf("$%0.2lf",prices[1]);
+    }
 
-    
     return 0;
 }
