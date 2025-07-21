@@ -4,34 +4,28 @@
 #include <math.h>
 #include <ctype.h>
 
-void sort(int array[], int size){
-
-    for(int i = 0; i < size-1; i++){
-        for(int j = 0; j < size-1; j++){
-            if(array[j] > array[j+1]){
-                int temp = array[j];
-                array[j] = array[j+1];
-                array[j+1] = temp;
-            }
-        }
-    }
-
-}
-
-void printArray(int array[], int size){
-
-    for(int i =0; i < size; i++){
-        printf("%d ",array[i]);
-    }
-}
+struct Player
+{
+    char name[12];
+    int score;
+};
 
 int main(){
 
-    int array[] = {1,3,5,7,8,6,9,2,4};
-    int size = sizeof(array)/sizeof(array[0]);
-
-    sort(array,size);
-    printArray(array,size);
+    struct Player player1;
+    struct Player player2;
     
+    strcpy(player1.name,"Andrew");
+    player1.score = 4;
+
+    strcpy(player2.name,"Dude");
+    player2.score = 5;
+    
+    printf("%s\n",player1.name);
+    printf("%d\n",player1.score);
+
+    printf("%s\n",player2.name);
+    printf("%d\n",player2.score);
+
     return 0;
 }
