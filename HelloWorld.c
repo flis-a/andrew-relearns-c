@@ -4,18 +4,34 @@
 #include <math.h>
 #include <ctype.h>
 
+void sort(int array[], int size){
+
+    for(int i = 0; i < size-1; i++){
+        for(int j = 0; j < size-1; j++){
+            if(array[j] > array[j+1]){
+                int temp = array[j];
+                array[j] = array[j+1];
+                array[j+1] = temp;
+            }
+        }
+    }
+
+}
+
+void printArray(int array[], int size){
+
+    for(int i =0; i < size; i++){
+        printf("%d ",array[i]);
+    }
+}
+
 int main(){
 
-    char x[15] = "Xx";
-    char y[15] = "Yy";
-    char temp[15];
+    int array[] = {1,3,5,7,8,6,9,2,4};
+    int size = sizeof(array)/sizeof(array[0]);
 
-    strcpy(temp,x);
-    strcpy(x,y);
-    strcpy(y,temp);
-
-    printf("x = %s\n", x);
-    printf("y = %s\n", y);
+    sort(array,size);
+    printArray(array,size);
     
     return 0;
 }
