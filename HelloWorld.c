@@ -1,21 +1,18 @@
 #include <stdio.h>
-#include <stdbool.h>
-#include <string.h>
-#include <math.h>
-#include <ctype.h>
-
-enum Day{Sun=1,Mon=2,Tue=3,Wed=4,Thu=5,Fri=6,Sat=7};
+#include <stdlib.h>
+#include <time.h>
 
 int main(){
 
-    enum Day today = Sun;
-    //printf("%d\n",today);
-    
-    if(today == Sun || today == Sat){
-        printf("Yay\n");
-    }else{
-        printf("Boo\n");
-    }
+    srand(time(0));
+
+    int num1 = (rand() % 20) + 1;
+    int num2 = (rand() % 12) + 1;
+    int num3 = (rand() % 6) + 1;
+
+    printf("Dice 1: %d\n",num1);
+    printf("Dice 2: %d\n",num2);
+    printf("Dice 3: %d\n",num3);
 
     return 0;
 }
