@@ -4,24 +4,17 @@
 #include <math.h>
 #include <ctype.h>
 
-typedef struct
-{
-    char name[15];
-    float GPA;
-
-}Student;
+enum Day{Sun=1,Mon=2,Tue=3,Wed=4,Thu=5,Fri=6,Sat=7};
 
 int main(){
 
-    Student s1 = {"John Wick",4.0};
-    Student s2 = {"Peter Griffin",2.2};
-    Student s3 = {"Spongebob",3.4};
-    Student s4 = {"Batman",5.0};
-
-    Student students[] = {s1,s2,s3,s4};
-
-    for(int i = 0; i < sizeof(students)/sizeof(students[1]); i++){
-        printf("%-15s\t%0.2f\n",students[i].name,students[i].GPA);
+    enum Day today = Sun;
+    //printf("%d\n",today);
+    
+    if(today == Sun || today == Sat){
+        printf("Yay\n");
+    }else{
+        printf("Boo\n");
     }
 
     return 0;
