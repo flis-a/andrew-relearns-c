@@ -4,28 +4,23 @@
 #include <math.h>
 #include <ctype.h>
 
-struct Player
+//typedef char user[25];
+
+typedef struct
 {
-    char name[12];
-    int score;
-};
+    char name[25];
+    char password[32];
+    int id;
+
+}User;
 
 int main(){
 
-    struct Player player1;
-    struct Player player2;
-    
-    strcpy(player1.name,"Andrew");
-    player1.score = 4;
+    User user1 = {"Andrew","123",123456789};
+    User user2 = {"Banana","456",123456789};
 
-    strcpy(player2.name,"Dude");
-    player2.score = 5;
-    
-    printf("%s\n",player1.name);
-    printf("%d\n",player1.score);
-
-    printf("%s\n",player2.name);
-    printf("%d\n",player2.score);
+    printf("%s\n",user1.name);
+    printf("%s\n",user2.name);
 
     return 0;
 }
