@@ -4,15 +4,40 @@
 
 int main(){
 
+    const int MIN = 1;
+    const int MAX = 100;
+    int guess;
+    int guesses = 0;
+    int answer;
+    
     srand(time(0));
 
-    int num1 = (rand() % 20) + 1;
-    int num2 = (rand() % 12) + 1;
-    int num3 = (rand() % 6) + 1;
+    answer = (rand() % MAX) + MIN;
 
-    printf("Dice 1: %d\n",num1);
-    printf("Dice 2: %d\n",num2);
-    printf("Dice 3: %d\n",num3);
+    do{
+
+        printf("Guess: ");
+        scanf("%d",&guess);
+
+        if(guess > answer){
+
+            printf("To High!\n");
+
+        }else if(guess < answer){
+
+            printf("To Low!\n");
+
+        }else{
+
+            printf("WINNER!\n");
+
+        }
+
+        guesses++;
+
+    }while(guess != answer);
+
+    printf("You guessed %d, in %d tries!\n",answer,guesses);
 
     return 0;
 }
