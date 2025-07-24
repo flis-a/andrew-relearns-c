@@ -36,7 +36,7 @@ int main(){
 
         printf("Guess: ");
         scanf("%c", &guess);
-        scanf("%*c");
+        scanf("%c"); //figure out why this does work
 
         guess = toupper(guess);
 
