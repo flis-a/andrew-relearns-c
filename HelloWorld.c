@@ -2,19 +2,20 @@
 
 int main(){
     
-    FILE *pF = fopen("test.txt", "w");
-    fprintf(pF, "test123\n");
-    fclose(pF);
+    FILE *pF = fopen("words.txt", "r");
+    char buffer[255];
 
-    /*
-    if(remove("test.txt") == 0)
-    {
-        printf("successfully deleted");
-    }else
-    {
-        printf("fail");
+    if(pF == NULL){
+        printf("UNABLE TO OPEN");
+    }else{
+        while(fgets(buffer, 255, pF) != NULL)
+            {
+                printf("%s", buffer);
+            }
     }
-    */
 
+
+
+    fclose(pF);
     return 0;
 }
