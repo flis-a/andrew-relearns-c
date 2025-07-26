@@ -1,26 +1,29 @@
 #include <stdio.h>
 
+void printAge(int *pAge){
+
+    printf("You are %d years old\n",*pAge);
+
+}
+
 int main(){
 
-    short a = 'X';
-    int b = 'Y';
-    double c = 'Z';
+    int age = 21;
+    int *pAge = NULL;
+    pAge = &age;
 
-    printf("A - %d bytes\n", sizeof(a));
-    printf("%p\n",&a);
-    printf("B - %d bytes\n", sizeof(b));
-    printf("%p\n",&b);
-    printf("C - %d bytes\n", sizeof(c));
-    printf("%p\n",&c);
+    printf("address of age: %p\n", &age);
+    printf("value of pAge: %p\n", pAge);
 
-    char d;
-    char e[8];
+    printf("size of age: %d bytes\n", sizeof(age));
+    printf("size of pAge: %d bytes\n", sizeof(pAge));
 
-    printf("D - %d bytes\n", sizeof(d));
-    printf("%p\n",&d);
-    printf("E - %d bytes\n", sizeof(e));
-    printf("%p\n",&e);
+    printf("value of age: %d\n", age);
+    printf("value at stored address: %d\n", *pAge);
 
+    printf("\n");
+
+    printAge(pAge);
 
     return 0;
 }
