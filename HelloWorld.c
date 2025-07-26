@@ -1,26 +1,26 @@
 #include <stdio.h>
-#include <ctype.h>
 
 int main(){
 
-    int x = 6;  // = 00000110
-    int y = 12; // = 00001100
-    int z = 0;  // = 00000000
+    short a = 'X';
+    int b = 'Y';
+    double c = 'Z';
 
-    z = x & y;
-    printf("AND: %d\n",z);
+    printf("A - %d bytes\n", sizeof(a));
+    printf("%p\n",&a);
+    printf("B - %d bytes\n", sizeof(b));
+    printf("%p\n",&b);
+    printf("C - %d bytes\n", sizeof(c));
+    printf("%p\n",&c);
 
-    z = x | y;
-    printf("OR: %d\n",z);
+    char d;
+    char e[8];
 
-    z = x ^ y;
-    printf("XOR: %d\n",z);
+    printf("D - %d bytes\n", sizeof(d));
+    printf("%p\n",&d);
+    printf("E - %d bytes\n", sizeof(e));
+    printf("%p\n",&e);
 
-    z = x << 1;
-    printf("SHIFT LEFT: %d\n",z);
 
-    z = x >> 1;
-    printf("SHIFT RIGHT: %d\n",z);
-    
     return 0;
 }
